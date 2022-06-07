@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강아지를 찾아라!</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap-4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="dog_NTH.css">
+</head>
+<body>
+    <header>
+        <h2 class="display-2" id="title">
+            <strong>
+                숨어있는 강아지 찾기
+            </strong>
+
+        </h2>
+        <hr>
+    </header>
+    <section class = "container col-12" >
+        <div class = "row col-12 justify-content-md-center ">
+            <nav class = "col-3 vertical-center rounded" style="background-color: antiquewhite;">
+                <ul class="nav flex-column nav-pills ">
+                    <li class="nav-item bg-white rounded row align-items-center" id = "game-start">
+                        <h4 class="col-12">게임 시작</h4>
+                    </li>
+                    <li class="nav-item bg-white rounded row align-items-center">
+                        <h4 class="col-8" style="display: inline-block;">남은 수: </h4>
+                        <div class="col-4" id = "left-dog-count">
+                            <select class="col-12 left-dog-select" id="left-dog-select">
+                            </select>
+                        </div>
+                    </li>
+                    <li class="nav-item bg-white rounded row align-items-center" >
+                        <h4 class="col-8" id = "left-time-label" style="display: inline-block;">게임 시간: </h4>
+                        <div class = "col-4" style="display:inline-block" id = "left-time-count">
+                            <input type="text" name="" id="left-time" style="width: 100%;">
+                        </div>
+                    </li>
+
+                    <li class="nav-item bg-white rounded row align-items-center" >
+                        <h4 class="col-8" style="display: inline-block;">실패수: </h4>
+                        <h4 class="col-4" id = "fail-count">0</h4>
+                    </li>
+
+                    <li class="nav-item bg-white rounded row align-items-center">
+                        <h4 class = "col-12" id = "game-msg">게임이 진행될 예정입니다.</h4>
+                    </li>
+
+                    <!-- https://developers.google.com/web/updates/2017/09/autoplay-policy-changes -->
+                    <!-- 크롬의 autoplay 정책 변경으로 크롬에서는 사용자에게 클릭 등의 이벤트가 일어나야 노래가 재생되게 바뀌었음.
+                    이에 따라 추가한 버튼 -->
+                    <!-- <li class="nav-item bg-white rounded row align-items-center" id = "music-button">
+                        <h4 class = "col-12" >노래가 재생되지 않는다면 눌러주세요.</h4>
+                    </li> -->
+                </ul>
+    
+            </nav>
+            <div class="col-1">
+
+            </div>
+            <article class="game-board col-8 rounded">
+                <div id = "board">
+                </div>
+                <div id = "fail-msg">
+                    GAME OVER
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+<script type="text/javascript" src="./jquery-migrate-3.3.0.js"></script>
+<script type="text/javascript" src="./bootstrap-4.5.0/js/bootstrap.min.js"></script>
+<script src="./dog_NTH.js"></script>
+</html>
